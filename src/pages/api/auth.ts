@@ -31,6 +31,7 @@ export default async function handler (req: NextApiRequest, res: NextApiResponse
         res.status(401).json({ message: 'Invalid hash' })
       }
     }
+  } else {
+    res.status(401).json({ message: 'Invalid request' })
   }
-  res.status(401).json({ message: 'Invalid request' })
 }
